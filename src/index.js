@@ -10,7 +10,6 @@
 export const minMaxMultiply = (minFirst, minSecond, maxFirst, maxSecond) => {
   let min = Math.min(minFirst, minSecond);
   let max = Math.max(maxFirst, maxSecond);
-  console.log(min, max, min * max);
   return min * max;
 };
 /**
@@ -21,8 +20,10 @@ export const minMaxMultiply = (minFirst, minSecond, maxFirst, maxSecond) => {
  * @returns {number}
  */
 export const getSquareOfCircle = (radius) => {
+  let squere;
   return (squere = Math.PI * Math.pow(radius, 2));
 };
+console.log(getSquareOfCircle(4));
 /**
  * Функция принимает число и точность к которой нужно округлить
  * Примеры можно смотреть в checks.js
@@ -32,7 +33,7 @@ export const getSquareOfCircle = (radius) => {
  * @returns {number}
  */
 export const getFixedValue = (number, accuracy) => {
-  return (Math.round(number) * Math.pow(10, accuracy)) / Math.pow(10, accuracy);
+  return Math.round(number * Math.pow(10, accuracy)) / Math.pow(10, accuracy);
 };
 /**
  * Если целая часть числа четная, то срабатывает Math.floor для этого числа
@@ -47,6 +48,7 @@ export const getFlooroCeil = (number) => {
     return Math.ceil(number);
   }
 };
+console.log(getFlooroCeil(4.55));
 
 /**
  * Мы передаем два числа, от какого и до какого числа и функция должна
